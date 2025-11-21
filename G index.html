@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechSolutions - Your partner in modern web development and digital solutions. We build responsive, user-friendly websites for businesses.">
+    <title>TechSolutions - Modern Web Development Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-icon">&#128187;</span> TechSolutions
+            </a>
+            <button class="navbar-toggler" type="button" id="navToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold mb-4">Welcome to TechSolutions</h1>
+                    <p class="lead mb-4">Building responsive, user-friendly websites for the modern web. Transform your digital presence with our cutting-edge solutions.</p>
+                    <p class="greeting-message" id="greeting"></p>
+                    <a href="services.html" class="btn btn-light btn-lg">Explore Our Services</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="Web development workspace with laptop and code" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- About Section -->
+        <section id="about" class="py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title mb-4">About Modern Web Development</h2>
+                    <p class="lead">Modern web development focuses on creating responsive, user-friendly websites that work seamlessly across all devices. We combine cutting-edge technologies with proven design principles to deliver exceptional digital experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Why Choose Us?</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">&#128640;</div>
+                            <h3>Fast Performance</h3>
+                            <p>Lightning-fast websites optimized for speed and efficiency, ensuring the best user experience.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">&#128241;</div>
+                            <h3>Responsive Design</h3>
+                            <p>Beautiful websites that adapt perfectly to any screen size, from mobile to desktop.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">&#128274;</div>
+                            <h3>Secure & Reliable</h3>
+                            <p>Built with security best practices to protect your data and ensure reliability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Date/Time Display -->
+        <section class="py-4 text-center">
+            <div class="date-time-display">
+                <p class="mb-2"><strong>Current Date & Time:</strong></p>
+                <p id="currentDateTime" class="text-muted"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>TechSolutions</h5>
+                    <p>Your partner in modern web development</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; <span id="currentYear"></span> TechSolutions. All rights reserved.</p>
+                    <p class="mb-0">Built with passion and modern web technologies</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

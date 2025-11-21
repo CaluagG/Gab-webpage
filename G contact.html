@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact TechSolutions for your web development needs. Get in touch with our team for a free consultation.">
+    <title>Contact Us - TechSolutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-icon">&#128187;</span> TechSolutions
+            </a>
+            <button class="navbar-toggler" type="button" id="navToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Contact Us</h1>
+            <p class="lead">Let's discuss your next project</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-lg-7 mb-4">
+                <section class="contact-form-section">
+                    <h2 class="mb-4">Send Us a Message</h2>
+                    
+                    <!-- Success Message (hidden by default) -->
+                    <div id="successMessage" class="alert alert-success d-none" role="alert">
+                        <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon.
+                    </div>
+
+                    <!-- Error Message (hidden by default) -->
+                    <div id="errorMessage" class="alert alert-danger d-none" role="alert">
+                        <strong>Oops!</strong> <span id="errorText"></span>
+                    </div>
+
+                    <form id="contactForm" novalidate>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name *</label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="fullName" 
+                                name="fullName"
+                                placeholder="John Doe"
+                                required>
+                            <div class="invalid-feedback">
+                                Please enter your full name.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input 
+                                type="email" 
+                                class="form-control" 
+                                id="email" 
+                                name="email"
+                                placeholder="john.doe@example.com"
+                                required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                class="form-control" 
+                                id="phone" 
+                                name="phone"
+                                placeholder="+1 (555) 123-4567">
+                            <div class="invalid-feedback">
+                                Please enter a valid phone number.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Service Interested In *</label>
+                            <select class="form-select" id="service" name="service" required>
+                                <option value="">Choose a service...</option>
+                                <option value="web-design">Responsive Web Design</option>
+                                <option value="ecommerce">E-Commerce Solutions</option>
+                                <option value="custom-app">Custom Web Applications</option>
+                                <option value="seo">SEO Optimization</option>
+                                <option value="maintenance">Maintenance & Support</option>
+                                <option value="ui-ux">UI/UX Design</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a service.
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea 
+                                class="form-control" 
+                                id="message" 
+                                name="message"
+                                rows="5"
+                                placeholder="Tell us about your project..."
+                                required></textarea>
+                            <div class="invalid-feedback">
+                                Please enter your message (minimum 10 characters).
+                            </div>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input 
+                                type="checkbox" 
+                                class="form-check-input" 
+                                id="newsletter"
+                                name="newsletter">
+                            <label class="form-check-label" for="newsletter">
+                                Subscribe to our newsletter for updates and tips
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <span id="submitText">Send Message</span>
+                            <span id="submitSpinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        </button>
+                    </form>
+                </section>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-lg-5">
+                <section class="contact-info-section">
+                    <h2 class="mb-4">Get in Touch</h2>
+                    
+                    <div class="contact-info-item mb-4">
+                        <div class="contact-icon">&#128231;</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p class="text-muted mb-0">info@techsolutions.com</p>
+                            <p class="text-muted">support@techsolutions.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item mb-4">
+                        <div class="contact-icon">&#128222;</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p class="text-muted mb-0">+1 (555) 123-4567</p>
+                            <p class="text-muted">Mon-Fri, 9AM-6PM EST</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item mb-4">
+                        <div class="contact-icon">&#127968;</div>
+                        <div>
+                            <h4>Office</h4>
+                            <p class="text-muted mb-0">123 Tech Street</p>
+                            <p class="text-muted">San Francisco, CA 94105</p>
+                        </div>
+                    </div>
+
+                    <div class="office-hours mt-5">
+                        <h4 class="mb-3">Office Hours</h4>
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Monday - Friday:</strong></td>
+                                    <td>9:00 AM - 6:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Saturday:</strong></td>
+                                    <td>10:00 AM - 4:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sunday:</strong></td>
+                                    <td>Closed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>TechSolutions</h5>
+                    <p>Your partner in modern web development</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; <span id="currentYear"></span> TechSolutions. All rights reserved.</p>
+                    <p class="mb-0">Built with passion and modern web technologies</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
